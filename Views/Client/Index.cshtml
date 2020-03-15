@@ -1,0 +1,24 @@
+﻿
+
+@model Partial_View.ViewModel.ClientViewModel
+
+<h1>Main Client View</h1>
+
+<form asp-controller="Client" asp-action="OnSubmit">
+    <div class="container">
+
+        @await Html.PartialAsync("~/Views/Client/PartialView/_ClientPartialView.cshtml", Model)
+
+        @await Html.PartialAsync("~/Views/Client/PartialView/_ClientLoginView.cshtml", Model)
+
+        @await Html.PartialAsync("~/Views/Client/PartialView/_ClientCommunicationPartialView.cshtml", Model)
+
+        @*@await Html.PartialAsync("~/Views/Client/PartialView/_ClientCommunicationPartialView.cshtml")*@
+
+        @{
+            await Html.RenderPartialAsync("~/Views/Client/PartialView/_ClientSubmit.cshtml");
+        }
+
+
+    </div>
+</form>

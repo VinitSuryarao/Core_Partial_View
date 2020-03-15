@@ -1,0 +1,19 @@
+﻿@model Partial_View.ViewModel.ClientViewModel
+
+<div class="row">
+    <div class="col-12">
+        <div class="form-group">
+            <label for="txtUserName">User Name:</label>
+            <input id="txtUserName" type="text" placeholder="UserName" class="form-control" asp-for="ClientModel.ClientLogin.UserName" />
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-12">
+        <div class="form-group">
+            <label for="txtPassword">Password:</label>
+            <input id="txtPassword" type="password" placeholder="Password" class="form-control" asp-for="ClientModel.ClientLogin.Password" />
+        </div>
+    </div>
+</div>
